@@ -23,22 +23,3 @@ const target = document.getElementById('target');
   } catch (e) {
     alert('Idle Detection error:' + e);
   }
-
-var $status = document.getElementById('status');
-
-if ('Notification' in window) {
-    $status.innerText = Notification.permission;
-}
-
-function nonPersistentNotification() {
-    if (!('Notification' in window)) {
-        alert('Notification API not supported!');
-        return;
-    }
-
-    try {
-        var notification = new Notification("Hi there - non-persistent!");
-    } catch (err) {
-        alert('Notification API error: ' + err);
-    }
-}

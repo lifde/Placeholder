@@ -24,6 +24,12 @@ const target = document.getElementById('target');
     alert('Idle Detection error:' + e);
   }
 
+var $status = document.getElementById('status');
+
+if ('Notification' in window) {
+    $status.innerText = Notification.permission;
+}
+
 function nonPersistentNotification() {
     if (!('Notification' in window)) {
         alert('Notification API not supported!');

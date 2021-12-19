@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" onclick="takePhoto()">
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="notification.js"></script>
     <script type="text/javascript" src="camera.js"></script>
@@ -19,8 +19,8 @@
         <a class="button" onclick="getStream()">Permission video</a>
       </header>
       <article>
-        <p hidden><video autoplay style="height: 180px; width: 240px;"></video></p>
-        <p><button onclick="takePhoto()">Take Photo!</button></p>
+          <p hidden><video autoplay style="height: 180px; width: 240px;"></video></p>
+          <p><button onclick="takePhoto()">Take Photo!</button></p>
           <p><img id="imageTag" width="240" height="180"></p>
 
           <p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>

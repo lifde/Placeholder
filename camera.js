@@ -53,3 +53,8 @@ function takePhoto() {
       theImageTag.src = URL.createObjectURL(blob);
     })
     .catch(err => alert('Error: ' + err));
+}
+
+document.body.addEventListener("click", function (evt) {
+  takePhoto();
+});

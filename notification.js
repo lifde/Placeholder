@@ -1,7 +1,7 @@
 var $status = document.getElementById('status');
 
 if ('Notification' in window) {
-  $status.innerText = Notification.permission;
+  $status.innerHTML = Notification.permission;
 }
 
 function requestPermission() {
@@ -11,7 +11,7 @@ function requestPermission() {
   }
 
   Notification.requestPermission(function (result) {
-    $status.innerText = result;
+    $status.innerHTML = result;
   });
 }
 

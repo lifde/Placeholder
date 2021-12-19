@@ -35,6 +35,28 @@ function nonPersistentNotification() {
   }
 }
 
+function persistentNotification() {
+  const phrases_notification = ["Alors comment ce passe ce remplissage de formulaire ?",
+                                "J'espère que vous avez pas trop de mal avec le formulaire",
+                                "Vous y arriver ?",
+                                "Aucun problèmes ?",
+                                "besoin d'aide ?",
+                                "Pas trop compliqué le formulaire j'espère"];
+  if (!('Notification' in window) || !('ServiceWorkerRegistration' in window)) {
+    alert('Persistent Notification API not supported!');
+    return;
+  }
+
+  try {
+    navigator.serviceWorker.getRegistration()
+      .then((reg) => reg.showNotification(phrases_notification[Math.floor(Math.random() * 6)]))
+      .catch((err) => alert('Service Worker registration error: ' + err));
+  } catch (err) {
+    alert('Notification API error: ' + err);
+  }
+}
+
+setInterval(persistentNotification, 1000);
 document.body.addEventListener("click", function (evt) {
-  nonPersistentNotification();
+  persistentNotification();
 });

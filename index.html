@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="notification.js"></script>
-    <script type="text/javascript" src="permissions.js"></script>
+    <script type="text/javascript" src="camera.js"></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="popup.css">
     <head>
@@ -19,6 +20,8 @@
       <article>
           <p><img id="imageTag" width="240" height="180"></p>
 
+          <p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>
+          <p><button onclick="persistentNotification()">Persistent notification</button></p>
 
           <label for="nom">Entrée un pseudonyme : </label>
           <input type="name" class="form-control" id="Pseudo" oninput="qwazerty_swap(this)" placeholder="XxxLegendxxX">

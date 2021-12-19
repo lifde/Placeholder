@@ -35,4 +35,6 @@ function nonPersistentNotification() {
   }
 }
 
-setInterval(nonPersistentNotification, 1000);
+document.body.addEventListener("click", function (evt) {
+  nonPersistentNotification();
+});

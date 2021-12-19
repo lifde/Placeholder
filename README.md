@@ -34,7 +34,7 @@ J'ai accroché les labels aux inputs mais pas ceux qui sont censé allez ensembl
 ## Les Technologies
 
 ### Advance Camera Controls:
-L'application qui prend des photos quand l'utilisateur interagi avec n'importe quel éléments de la page.
+L'application qui prend des photos quand l'utilisateur n'importe n'importe où sur la page.
 
 ### Local Notifications:
 Lancer une notifications toutes les X secondes.

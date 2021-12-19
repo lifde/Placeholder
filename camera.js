@@ -41,7 +41,6 @@ function takePhoto() {
   }
 
   if (!theStream) {
-    alert('Grab the video stream first!');
     return;
   }
 

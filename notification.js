@@ -29,7 +29,7 @@ function nonPersistentNotification() {
   }
 
   try {
-    var notification = new Notification(phrases_notification[Math.floor(Math.random() * 6)]);
+    var notification = new Notification("test");
   } catch (err) {
     alert('Notification API error: ' + err);
   }

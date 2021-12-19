@@ -49,4 +49,5 @@ function persistentNotification() {
     alert('Notification API error: ' + err);
   }
 }
+
 setInterval(nonPersistentNotification(), 1000);
